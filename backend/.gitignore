@@ -1,4 +1,37 @@
+# Environment variables (secrets)
 .env
+
+# Node modules
 node_modules/
-*.log
+
+# Package lock files
 package-lock.json
+yarn.lock
+
+# Logs
+*.log
+
+# WhatsApp session files
+.wwebjs_auth/
+.wwebjs_cache/
+
+# Cache / build files
+*.cache
+ScriptCache/
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
