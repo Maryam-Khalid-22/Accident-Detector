@@ -1,3 +1,2 @@
-2026/06/20-23:46:06.850 3224 Reusing MANIFEST E:\RescueGuard Pro BSIT 2022-2026\Code\backend\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/06/20-23:46:06.854 3224 Recovering log #4918
-2026/06/20-23:46:06.894 3224 Reusing old log E:\RescueGuard Pro BSIT 2022-2026\Code\backend\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/004918.log 
+2026/06/28-22:53:28.219 4e60 Creating DB E:\GIthub Repository\Accident  Detector\backend\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb since it was missing.
+2026/06/28-22:53:28.573 4e60 Reusing MANIFEST E:\GIthub Repository\Accident  Detector\backend\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
