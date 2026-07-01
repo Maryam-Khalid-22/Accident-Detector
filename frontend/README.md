@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# 🚨 RescueGuard Pro – Accident Detection System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application that detects accidents using **voice, motion, or manual trigger** and sends **automatic WhatsApp alerts** with real-time GPS location to emergency contacts.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- **3 Detection Methods** – Manual button, voice commands (`help`, `emergency`), and motion/shake detection
+- **60‑Second Countdown** – Gives users time to cancel false alarms
+- **WhatsApp Alerts** – Sends location, time, and Google Maps link to saved contacts
+- **Emergency Contact Management** – Add, edit, or remove contacts (stored in MongoDB + localStorage)
+- **Secure Authentication** – JWT tokens, bcrypt password hashing, email verification (OTP)
+- **Feedback & Support System** – Users can send feedback and support requests
+- **Admin Monitoring** – View users, feedback, and support requests
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+| Layer | Technology |
+|-------|------------|
+| **Language** | JavaScript (used throughout frontend + backend) |
+| **Frontend** | React.js, JSX, Web Speech API, DeviceMotionEvent API |
+| **Backend** | Node.js, Express.js, JWT, bcrypt, Nodemailer |
+| **Database** | MongoDB Atlas, Mongoose |
+| **WhatsApp** | whatsapp-web.js, Puppeteer, QR Code |
+| **Tools** | VS Code, Git, GitHub, Postman |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📦 Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+- Node.js (version 18.20.5 – **MUST use v18**)
+- MongoDB Atlas (or local MongoDB)
+- Google Chrome (for voice detection)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Steps
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# 1. Clone the repository
+git clone https://github.com/Maryam-Khalid-22/Accident-Detector.git
 
-### `npm run eject`
+# 2. Frontend setup
+cd frontend
+npm install
+npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# 3. Backend setup (in a new terminal)
+cd backend
+npm install
+node server.js
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+⚠️ Important: If your backend crashes, run nvm use 18.20.5 and delete .wwebjs_auth and .wwebjs_cache folders.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🔐 Environment Variables (.env)
 
-## Learn More
+Create a .env file in the backend folder with:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```env
+PORT=5000
+MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/emergency_db
+JWT_SECRET=your_secret_key
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_app_password
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+🔒 Security
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+· Passwords hashed with bcrypt
+· JWT authentication (7‑day expiry)
+· Input validation (frontend + backend)
+· .env file for sensitive data
+· WhatsApp session management
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+📌 Fallback Feature
 
-### Making a Progressive Web App
+If automatic WhatsApp connection fails, the system sends a wa.me link – contacts just tap and send.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+🧪 Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+· Test the system using the "Simulate Accident" button
+· Use "Test Alert System" to verify WhatsApp integration
+· Voice detection works best in Google Chrome
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+🤝 Contributing
 
-### `npm run build` fails to minify
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+📄 License
+
+This project is unlicensed – all rights are reserved by the author. You may view and fork the code, but you may not use, copy, modify, or distribute it without permission.
+
+---
+
+👩‍💻 Author
+
+Maryam Khalid – Full Stack Developer
+📧 maryamfatima2034@gmail.com
+🔗 GitHub · LinkedIn
